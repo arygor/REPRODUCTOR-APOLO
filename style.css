@@ -1,0 +1,90 @@
+
+
+* {
+    padding: unset;
+    margin: unset;
+    outline: unset;
+    border: unset;
+
+    /* propiedad magica de seteo */
+    box-sizing: border-box;
+    
+    font-size: 16px;
+    font-weight: 400;
+}
+
+body {
+    color: #ffffff;
+    font-family: "roboto",'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #aeacaa;
+    background-image:  url(assets/fondo\ reproductor.jpg);
+    background-attachment:fixed;
+    background-size: cover;
+    display: flex;
+    gap: 200px;
+}
+
+ul { list-style: none;}
+
+.seccion1 {
+    display: flex;
+    flex-direction: column;
+    padding: 20px 60px 60px 20px;
+    gap: 200px ;
+    background: linear-gradient(#be030371,#11000073);
+
+}
+
+.apolo {
+    display: flex;
+    align-items: center;
+
+
+}
+.apolo a {
+    display: flex;
+    align-items: center;
+    color: #ffffff;
+    gap: 20px;
+}
+
+.seccion2 {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding: 100px 80px ;
+    gap: 150px ;
+}
+
+.cancion img{
+    display: flex;
+    height: 250px;
+    width: 100%;
+    object-fit: cover;
+}
+
+.InfCancion {
+    display: flex;
+    flex-direction: column;
+    align-items:start;
+    color: #ffffff;
+    gap: 10px;
+}
+
+.reproductor {
+    display: flex;
+    gap: 20px;
+
+}
+
+.seccion3 {
+    display: flex;
+    flex-direction: column;
+    padding: 20px 60px;
+    gap: 5px;
+    background: linear-gradient(#be030371,#11000073);
+}
+    
+    
+
+
