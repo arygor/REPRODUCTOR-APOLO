@@ -30,14 +30,33 @@ axios.get("https://api.institutoalfa.org/api/songs")
 
 // crea un elemento cancion y la regresa 
 
-function CrearComponenteCancion(song) {
+function CrearComponenteCancion(cancion) {
     const li = document.createElement ('li')
     li.setAttribute('class', 'cancion')
 
-    li.innerHTML = `<h3>${song.title}</h3>
-    <p>${song.author}</p>
+    li.innerHTML = `<h3>${cancion.title}</h3>
+    <p>${cancion.author}</p>
     
     `
+
+    li.addEventListener("click",function () {
+        // esto va a pasar cuando el usuario haga click
+        document.getElementById("audio")
+        .setAttribute("src", cancion.audio.url)
+
+        document.getElementById("imagen")
+        .setAttribute("src",cancion.image.url)
+
+        document.getElementById("nombre")
+        .innerHTML = cancion.title
+
+        document.getElementById("autor")
+        .innerHTML = cancion.author
+
+        document.getElementById("album")
+        .innerHTML = cancion.album
+
+    })
 
 
     return li
@@ -45,4 +64,17 @@ function CrearComponenteCancion(song) {
 
 }
 
-// aqui añadimos un componente al reproductor
+// es una funcion que se usa solo una vez , por eso va aparte
+
+const audio = document.getElementById('audio')
+
+document.getElementById("play-pause").addEventListener ("click", function(){
+   
+    if (audio.paused){
+        audio.play()
+    }
+    else {
+        audio.pause()
+    }
+    
+})
